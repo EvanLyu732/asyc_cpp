@@ -18,8 +18,7 @@ int main(int argc, char** argv)
   auto g = keys.
     filter([](int key){return std::tolower(key) == 'g'; });
 
-  a.merge(g).
-    .subscribe([](int key){
+  a.merge(g).subscribe([](int key){
         std::cout << key << std::endl;
     });
 
